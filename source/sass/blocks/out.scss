@@ -1,0 +1,25 @@
+@media (min-width: 1024px) {
+  body {
+    //width: 100%;
+    background: $bg url("../img/Desktop.png") no-repeat 50% 0;
+    background-size: 1366px auto;
+    min-height: 5889px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  body {
+    background: $bg url("../img/Tablet.png") no-repeat 50% 0;
+    background-size: 768px auto;
+    min-height: 7108px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  body {
+    /* Стили, влияющие на экраны ДО 767px (Мобильные) */
+    background: $bg url("../img/Phone.png") no-repeat 50% 0;
+    background-size: 320px auto;
+    min-height: 8202px;
+  }
+}

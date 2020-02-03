@@ -1,0 +1,38 @@
+body {
+  @include mp-reset;
+  min-width: 320px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: $font-family-Roboto-Condensed;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  font-style: normal;
+
+  background-color: $bg;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+
+  cursor: pointer;
+  outline: none;
+}
+
+
