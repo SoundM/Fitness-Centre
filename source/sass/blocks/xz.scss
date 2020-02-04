@@ -1,0 +1,26 @@
+//<div class="module-border-wrap"><div class="module">
+//</div></div>
+
+body {
+  height: 300vh;
+  margin: 0;
+  display: block;
+  place-items: center;
+  background: #222222;
+}
+
+.module-border-wrap {
+  max-width: 250px;
+
+
+  background: linear-gradient(to top right, red, green);
+  border-radius: 70px;
+  padding: 3px;
+}
+
+.module {
+  background: #222222;
+  color: white;
+  padding: 2px;
+  border-radius: 70px;
+}

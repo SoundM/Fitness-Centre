@@ -1,15 +1,24 @@
 @mixin mp-reset {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 @mixin list-reset {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 @mixin text {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin a {
   margin: 0;
   padding: 0;
   display: inline-block;
