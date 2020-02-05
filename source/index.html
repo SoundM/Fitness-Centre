@@ -25,7 +25,19 @@
         </ul>
         <a href="#yak1" class="page-header__content--link">Купить абонемент</a>
       </div>
-      <img src="img/header-desktop-photo@1x.jpg" alt="Фото">
+      <div class="page-header__wrapper-content--img">
+      <picture>
+        <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/header-desktop-photo@1x.webp 1x, img/header-desktop-photo@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/header-tablet-photo@1x.webp 1x, img/header-tablet-photo@2x.webp 2x">
+
+        <source media="(min-width: 1200px)"
+                srcset="img/header-desktop-photo@1x.jpg 1x, img/header-desktop-photo@2x.jpg 2x">
+        <img    src="img/header-tablet-photo@1x.jpg" srcset="img/header-tablet-photo@2x.jpg"
+             alt="Фото">
+      </picture>
+      </div>
       <div class="page-header__social">
         <ul>
           <li><a href="#">FB</a></li>

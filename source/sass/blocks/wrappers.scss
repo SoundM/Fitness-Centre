@@ -1,16 +1,16 @@
 .wrapper-header {
   @include mp-reset;
-  min-height: 658px;
+  min-height: 590px; //658
   background-color: transparent;
   //background-color: #b80027;
-  background-image: url("../img/desktop@1x.jpg");
+  //background-image: url("../img/desktop@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 0;
   background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/desktop@2x.jpg");
-  }
+  //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //  background-image: url("../img/desktop@2x.jpg");
+  //}
 }
 
 @media (max-width: $tablet-width) {
@@ -18,14 +18,14 @@
     min-height: 554px;
     background-color: transparent;
     //background-color: #b80027;
-    background-image: url("../img/tablet@1x.jpg");
+    //background-image: url("../img/tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/tablet@2x.jpg");
-    }
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //  background-image: url("../img/tablet@2x.jpg");
+    //}
   }
 }
 
@@ -39,8 +39,8 @@
     background-position: 50% 0;
     background-size: cover;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/header-mobile@2x.jpg");
-    }
+    //@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //  background-image: url("../img/header-mobile@2x.jpg");
+    //}
   }
 }
