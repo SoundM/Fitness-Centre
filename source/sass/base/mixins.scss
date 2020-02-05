@@ -24,3 +24,12 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+@mixin button {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
