@@ -1,0 +1,315 @@
+.season-tickets__wrapper {
+  @include mp-reset;
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  & h2 {
+    @include text;
+    margin-top: 120px;
+    font-family: $font-family-Bebas-Neue;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    color: $font-black;
+  }
+}
+
+.season-tickets__for-a-period-of {
+  @include list-reset;
+  margin-top: 35px;
+  width: 29%;
+  min-height: 40px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  display: flex;
+  justify-content: space-between;
+
+  & a {
+    @include a;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+
+    color: rgba(16, 38, 84, 0.5);
+
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.season-tickets__for-a-period-of a.active {
+  width: 100%;
+  position: relative;
+  color: $font-black;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #d10a42;
+    bottom: -11px;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.season-tickets__menu {
+  @include list-reset;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.season-tickets__item {
+  @include mp-reset;
+  margin-right: 3.5%;
+  margin-bottom: 40px;
+  padding: 7px;
+  width: 31%;
+  min-height: 448px;
+  background: $bg-white;
+  position: relative;
+  z-index: 5;
+
+  &:hover {
+    background: linear-gradient(to bottom right, #d10a42, #00359f);
+  }
+
+  &:focus {
+    background: linear-gradient(to bottom right, #d10a42, #00359f);
+  }
+}
+
+.season-tickets__item--wrapper {
+  @include mp-reset;
+  width: 100%;
+  min-height: 434px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  background-color: $bg-white;
+
+  & h3 {
+    @include text;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+
+    color: $font-black;
+  }
+
+  & span {
+    @include text;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #495a7d;
+  }
+
+  & a {
+    width: 206px;
+    height: 64px;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $font-black;
+    border: 2px solid #102654;
+
+    &:hover {
+      background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+      color: $font-white;
+      border: none;
+    }
+  }
+}
+
+ul.season-tickets__menu li:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+span.season-tickets__price {
+  @include text;
+  width: 170px;
+  margin-top: 90px;
+  margin-bottom: 55px;
+  font-family: $font-family-Roboto-Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70%;
+  position: relative;
+  z-index: 50;
+
+  color: #103aae;
+
+  &::before {
+    content: attr(price);
+    width: 203px;
+    height: 69px;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 150%;
+    position: absolute;
+    right: -15px;
+    bottom: 50px;
+
+    color: #e8e8e8;
+    opacity: 0.48;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 42px;
+    background-image: url("../img/ruble.svg");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .season-tickets__wrapper {
+    @include mp-reset;
+    margin-right: 6%;
+    margin-left: 6%;
+
+    & h2 {
+      margin-top: 99px;
+      font-size: 42px;
+      line-height: 42px;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  .season-tickets__for-a-period-of {
+    width: 49%;
+    margin-top: 30px;
+
+    & a {
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+
+  .season-tickets__for-a-period-of a.active::after {
+    height: 2px;
+    bottom: -14px;
+  }
+
+  .season-tickets__menu {
+    margin-top: 45px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .season-tickets__item {
+    margin-right: 0;
+    width: 65%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .season-tickets__wrapper {
+    margin-right: 5%;
+    margin-left: 5%;
+
+    & h2 {
+      margin-top: 68px;
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  .season-tickets__for-a-period-of {
+    width: 100%;
+    margin-top: 22px;
+
+    & a {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  .season-tickets__menu {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: start;
+  }
+
+  .season-tickets__item {
+    width: 100%;
+    min-height: 384px;
+    margin-bottom: 34px;
+  }
+
+  .season-tickets__item--wrapper {
+    min-height: 370px;
+
+    & h3 {
+      margin: 48px 0 8px;
+      font-size: 22px;
+      line-height: 110.16%;
+    }
+  }
+
+  span.season-tickets__price {
+    margin: 55px 0 29px;
+    width: 128px;
+    font-size: 48px;
+    line-height: 150%;
+
+    &::before {
+      font-size: 80px;
+      line-height: 150%;
+      right: -58px;
+      bottom: 47px;
+    }
+
+    &::after {
+      content: "";
+      background-image: url("../img/ruble-mobile.svg");
+      width: 24px;
+      height: 33px;
+      right: -3px;
+      bottom: 20px;
+    }
+  }
+}

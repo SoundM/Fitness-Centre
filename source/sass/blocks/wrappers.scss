@@ -39,3 +39,60 @@
     }
   }
 }
+
+.wrapper-season-tickets {
+  @include mp-reset;
+  min-height: 851px;
+  background-color: $bg-grey;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 287px;
+    height: 494px;
+    right: 0;
+    bottom: -150px;
+    background-image: url("../img/pancakes-desktop@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 287px 494px;
+    z-index: 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/pancakes-desktop@2x.png");
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper-season-tickets {
+    min-height: 1779px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 347px;
+      height: 444px;
+      right: 0;
+      bottom: -125px;
+      background-image: url("../img/pancakes-tablet@1x.png");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 347px 444px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/pancakes-tablet@2x.png");
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .wrapper-season-tickets {
+    min-height: 1487px;
+
+    &::after {
+      background-image: none;
+      background-size: 0 0;
+    }
+  }
+}
