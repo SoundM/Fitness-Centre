@@ -18,6 +18,18 @@
   letter-spacing: 0.02em;
 
   color: $font-white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .page-header__link-phone {
@@ -27,6 +39,18 @@
   letter-spacing: 0.04em;
 
   color: $font-white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .page-header__wrapper-content {
@@ -101,6 +125,18 @@
     line-height: 150%;
 
     color: $font-white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 
   & .page-header__content--link {
@@ -122,6 +158,18 @@
 
     color: $font-white;
     border: 4px solid $bg-white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -155,6 +203,18 @@
       text-transform: uppercase;
 
       color: $font-white;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:focus {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
     }
   }
 }
