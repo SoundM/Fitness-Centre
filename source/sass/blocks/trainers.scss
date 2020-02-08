@@ -245,6 +245,20 @@ li.trainers__item:hover div.trainers__item--content {
   }
 }
 
+ul.no-js li {
+  margin-right: 0;
+  flex: 0 0 53%;
+}
+
+ul.no-js li:nth-child(2n + 2) {
+  margin-right: 0;
+  flex: 0 0 46%;
+
+  & div {
+    width: 100%;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .trainers {
     min-height: 418px;
@@ -291,5 +305,15 @@ li.trainers__item:hover div.trainers__item--content {
 
   .trainers__control--right {
     right: 3.3%;
+  }
+
+  ul.no-js li {
+    margin-right: 0;
+    flex: 0 0 100%;
+  }
+
+  ul.no-js li:nth-child(2n + 2) {
+    margin-right: 0;
+    flex: 0 0 100%;
   }
 }
