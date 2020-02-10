@@ -134,39 +134,39 @@ var multiItemSlider = (function () {
 
 var trainers = multiItemSlider('.trainers');
 
-// // слайдер легкий карусель
-// var slideIndex = 1;
-// var slides = document.querySelectorAll('.reviews__item');
-// var prev = document.querySelector('.reviews__control--left');
-// var next = document.querySelector('.reviews__control--right');
-//
-//
-// showSlides(slideIndex);
-//
-// function showSlides(n) {
-//
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//   if (n < 1) {
-//     slideIndex = slides.length;
-//   }
-//
-//   for (var i = 0; i < slides.length; i++) {
-//     slides[i].style.display = 'none';
-//   }
-//   slides[slideIndex - 1].style.display = 'block';
-// }
-//
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-//
-// prev.addEventListener('click', function () {
-//   plusSlides(-1);
-// });
-//
-// next.addEventListener('click', function () {
-//   plusSlides(1);
-// });
+// слайдер легкий карусель
+var slideIndex = 1;
+var slides = document.querySelectorAll('.reviews__item');
+var prev = document.querySelector('.reviews__control--left');
+var next = document.querySelector('.reviews__control--right');
+
+
+showSlides(slideIndex);
+
+function showSlides(n) {
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex - 1].style.display = 'block';
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+prev.addEventListener('click', function () {
+  plusSlides(-1);
+});
+
+next.addEventListener('click', function () {
+  plusSlides(1);
+});
 

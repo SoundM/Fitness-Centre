@@ -33,7 +33,7 @@
   //background-color: $bg-white;
 }
 
-ul.no-js {
+ul.trainers__menu.no-js {
   flex-wrap: wrap;
 }
 
@@ -54,7 +54,7 @@ ul.no-js {
   }
 }
 
-ul.no-js li:nth-child(4n + 4) {
+ul.trainers__menu.no-js li:nth-child(4n + 4) {
   margin-right: 0;
   flex: 0 0 22.45%;
 
@@ -63,7 +63,7 @@ ul.no-js li:nth-child(4n + 4) {
   }
 }
 
-ul.no-js ~ a {
+ul.trainers__menu.no-js ~ a {
   display: none;
 }
 
@@ -244,12 +244,12 @@ li.trainers__item:hover div.trainers__item--content {
     left: 5.3%;
   }
 
-  ul.no-js li {
+  ul.trainers__menu.no-js li {
     margin-right: 0;
     flex: 0 0 53%;
   }
 
-  ul.no-js li:nth-child(2n + 2) {
+  ul.trainers__menu.no-js li:nth-child(2n + 2) {
     margin-right: 0;
     flex: 0 0 46%;
 
@@ -307,12 +307,12 @@ li.trainers__item:hover div.trainers__item--content {
     right: 3.3%;
   }
 
-  ul.no-js li {
+  ul.trainers__menu.no-js li {
     margin-right: 0;
     flex: 0 0 100%;
   }
 
-  ul.no-js li:nth-child(2n + 2) {
+  ul.trainers__menu.no-js li:nth-child(2n + 2) {
     margin-right: 0;
     flex: 0 0 100%;
   }

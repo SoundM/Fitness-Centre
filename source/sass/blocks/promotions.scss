@@ -294,6 +294,7 @@ ul.promotions__menu li:last-child {
     min-height: 220px;
 
     & p {
+      @include text;
       width: 70%;
       margin-top: 16px;
       text-align: center;

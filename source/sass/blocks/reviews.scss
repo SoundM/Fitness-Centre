@@ -33,6 +33,8 @@
   @include list-reset;
   width: 83%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__item {
@@ -42,6 +44,7 @@
   position: relative;
   justify-content: flex-end;
   min-height: 242px;
+  margin-bottom: 30px;
 }
 
 .reviews__photo {
@@ -102,6 +105,8 @@
 }
 
 .reviews__control {
+  outline: none;
+  border: none;
   position: absolute;
   top: 50%;
   display: none;
@@ -119,6 +124,12 @@
 .reviews__control:hover,
 .reviews__control:focus {
   opacity: 0.5;
+  outline: none;
+}
+
+.reviews__control:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .reviews__control--left {
@@ -163,6 +174,11 @@
 
   .reviews__menu {
     width: 83.3%;
+  }
+
+  .reviews__menu .no-js {
+    display: flex;
+    flex-direction: column;
   }
 
   .reviews__content {
