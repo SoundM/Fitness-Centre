@@ -33,7 +33,7 @@
   //background-color: $bg-white;
 }
 
-.no-js {
+ul.no-js {
   flex-wrap: wrap;
 }
 
@@ -243,19 +243,19 @@ li.trainers__item:hover div.trainers__item--content {
   .trainers__control--left {
     left: 5.3%;
   }
-}
 
-ul.no-js li {
-  margin-right: 0;
-  flex: 0 0 53%;
-}
+  ul.no-js li {
+    margin-right: 0;
+    flex: 0 0 53%;
+  }
 
-ul.no-js li:nth-child(2n + 2) {
-  margin-right: 0;
-  flex: 0 0 46%;
+  ul.no-js li:nth-child(2n + 2) {
+    margin-right: 0;
+    flex: 0 0 46%;
 
-  & div {
-    width: 100%;
+    & div {
+      width: 100%;
+    }
   }
 }
 
