@@ -135,6 +135,9 @@ var multiItemSlider = (function () {
 var trainers = multiItemSlider('.trainers');
 
 // слайдер легкий карусель
+var allReviews = document.querySelector('.reviews__menu');
+allReviews.classList.remove('no-js');
+
 var slideIndex = 1;
 var slides = document.querySelectorAll('.reviews__item');
 var prev = document.querySelector('.reviews__control--left');
