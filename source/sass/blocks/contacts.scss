@@ -135,6 +135,7 @@
   @include mp-reset;
   width: 50%;
   background-color: $bg-white;
+  border-top: 1px solid #74819c;
 
   & h2 {
     margin-left: 18%;
@@ -157,7 +158,7 @@
   display: flex;
 
   &--left {
-    width: 48%;
+    width: 48.3%;
     min-height: 110px;
     border-right: 1px solid #74819c;
     display: flex;
@@ -189,6 +190,18 @@
   }
 
   & span {
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: $font-black;
+  }
+
+  & a {
     font-family: $font-family-Roboto-Condensed;
     font-style: normal;
     font-weight: normal;
@@ -235,6 +248,7 @@
   .contact__address {
     width: 100%;
     min-height: 351px;
+    border: none;
 
     & h2 {
       margin-left: 17.4%;
@@ -265,6 +279,10 @@
     }
 
     & span {
+      font-size: 18px;
+    }
+
+    & a {
       font-size: 18px;
     }
   }

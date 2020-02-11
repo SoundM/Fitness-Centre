@@ -163,7 +163,7 @@ ul.promotions__menu li:last-child {
 
   & h3 {
     @include text;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-family: $font-family-Roboto-Condensed;
     font-style: normal;
     font-weight: bold;
@@ -321,6 +321,7 @@ ul.promotions__menu li:last-child {
 
     & h3 {
       text-align: center;
+      margin-bottom: 10px;
     }
 
     & span {
