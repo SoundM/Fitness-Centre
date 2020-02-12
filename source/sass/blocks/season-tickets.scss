@@ -177,7 +177,7 @@ span.season-tickets__price {
   color: #103aae;
 
   &::before {
-    content: attr(price);
+    content: "";
     width: 203px;
     height: 69px;
     font-family: $font-family-Roboto-Condensed;
@@ -192,6 +192,24 @@ span.season-tickets__price {
     color: #e8e8e8;
     opacity: 0.48;
     z-index: -1;
+  }
+
+  &--500 {
+    &::before {
+      content: "500";
+    }
+  }
+
+  &--1700 {
+    &::before {
+      content: "1700";
+    }
+  }
+
+  &--2700 {
+    &::before {
+      content: "2700";
+    }
   }
 
   &::after {
