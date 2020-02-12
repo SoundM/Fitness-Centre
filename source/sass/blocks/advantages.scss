@@ -134,6 +134,7 @@ ul.advantages__menu li:nth-child(4n + 5) {
 
 ul.advantages__menu li.advantages__central-content {
   @include mp-reset;
+  padding-bottom: 57px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -246,6 +247,7 @@ ul.advantages__menu li.advantages__central-content {
     @include mp-reset;
     transform: translateX(-50%);
     margin-bottom: 47px;
+    padding-bottom: 38px;
     min-width: 65.3%;
     min-height: 239px;
     position: relative;
@@ -314,6 +316,7 @@ ul.advantages__menu li.advantages__central-content {
   }
 
   ul.advantages__menu li.advantages__central-content {
+    padding-bottom: 40px;
     width: 100%;
     margin-top: 2px;
     margin-bottom: 48px;

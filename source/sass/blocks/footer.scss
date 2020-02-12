@@ -1,14 +1,16 @@
 .footer {
   @include mp-reset;
-  min-height: 108px;
   background-color: #030a1a;
+  width: 100%;
+  min-height: 108px;
 }
 
 .footer__wrapper {
   @include mp-reset;
-  min-height: 108px;
   padding-right: 103px;
   padding-left: 103px;
+  padding-bottom: 40px;
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,29 +27,36 @@
 
 .footer__navigation-menu {
   @include list-reset;
-  width: 39%;
-  padding-left: 23px;
+  padding-left: 8px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer__navigation-item a {
-  font-family: $font-family-Roboto-Condensed;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
+.footer__navigation-item {
+  margin-left: 40px;
 
-  color: $font-white;
+  & a {
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: $font-white;
+  }
 }
 
 .footer__social-menu {
   @include list-reset;
-  width: 9.5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.footer__social-item {
+  margin-left: 25px;
 }
 
 @media (max-width: $tablet-width) {
@@ -62,12 +71,13 @@
     font-size: 24px;
   }
 
-  .footer__navigation-menu {
-    width: 61%;
+  .footer__navigation-item {
+    margin-left: 30px;
   }
 
-  .footer__social-menu {
-    width: 15%;
+
+  .footer__social-item {
+    margin-left: 20px;
   }
 }
 
@@ -117,13 +127,20 @@
     margin-bottom: 10px;
   }
 
-
   .footer__social-menu {
+    width: 100%;
     margin-top: 38px;
-    margin-left: 15px;
+    margin-left: 0;
     margin-right: auto;
-    width: 45%;
+    padding-left: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
+  }
+
+  .footer__social-item {
+    margin-left: 0;
+    margin-right: 11.3%;
   }
 
   .footer__social-item--vk svg {
@@ -141,3 +158,4 @@
     height: 27px;
   }
 }
+
