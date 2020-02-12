@@ -70,15 +70,15 @@
 }
 
 .page-header__content {
-  //margin-top: 117px;
+  min-height: 145px;
+  margin-top: 303px;
   margin-bottom: 42px;
   margin-right: 5.3%;
-  width: 398px;
+  width: 34.3%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  //position: relative;
+  justify-content: space-between;
+  position: relative;
 
   & span {
     @include text;
@@ -87,12 +87,20 @@
     font-size: 49px;
     line-height: 49px;
     letter-spacing: 0.03em;
+    text-align: right;
 
     color: $font-white;
   }
 
   & div {
-    position: relative;
+    @include mp-reset;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: -185px;
+    right: 2px;
   }
 
   & h1 {
@@ -111,9 +119,7 @@
     @include list-reset;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 126px;
-    right: 67%;
+    margin-right: 67%;
 
     & li {
       text-align: right;
@@ -122,6 +128,7 @@
 
   & a {
     @include a;
+    align-self: flex-end;
     font-family: $font-family-Roboto-Condensed;
     font-style: normal;
     font-weight: normal;
@@ -148,7 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 58px;
+    margin-top: 85px;
     width: 233px;
     height: 60px;
 
@@ -250,6 +257,7 @@
 
   .page-header__content {
     @include mp-reset;
+    margin-top: 185px;
     margin-bottom: 23px;
     width: 327px;
     margin-right: 4.5%;
@@ -261,6 +269,10 @@
       letter-spacing: 0.03em;
     }
 
+    & div {
+      top: -132px;
+    }
+
     & h1 {
       font-size: 86px;
       line-height: 86px;
@@ -269,13 +281,12 @@
     }
 
     & ul {
-      top: 90px;
-      right: 65%;
+      margin-right: 65%;
     }
 
     & .page-header__content--link {
       width: 187px;
-      margin-top: 41px;
+      margin-top: 35px;
     }
   }
 
@@ -286,8 +297,8 @@
 
 @media (max-width: $mobile-width) {
   .page-header {
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 4.4%;
+    margin-left: 4.4%;
     padding-top: 18px;
     padding-bottom: 77px;
   }
@@ -311,6 +322,9 @@
 
   .page-header__content {
     @include mp-reset;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 195px;
     width: 100%;
 
     & span {
@@ -321,6 +335,10 @@
       letter-spacing: 0.03em;
     }
 
+    & div {
+      top: -194px;
+    }
+
     & h1 {
       font-size: 78px;
       line-height: 78px;
@@ -328,14 +346,13 @@
     }
 
     & ul {
-      top: 78px;
-      right: 60.9%;
+      margin-right: 61%;
     }
 
     & .page-header__content--link {
-      width: 290px;
+      width: 292px;
       height: 62px;
-      margin-top: 44px;
+      margin-top: 53px;
     }
   }
 }
