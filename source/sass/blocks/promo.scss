@@ -15,6 +15,8 @@
 }
 
 .promo__background {
+  padding-top: 84px;
+  padding-bottom: 50px;
   width: 43%;
   background-color: #b80027;
 }
@@ -22,9 +24,8 @@
 .promo__content {
   @include mp-reset;
   margin: 0 auto;
-  padding-top: 84px;
   min-width: 345px;
-  width: 69%;
+  width: 69.5%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -91,7 +92,14 @@
 }
 
 .promo__img {
+  @include mp-reset;
   width: 56.8%;
+  min-height: 100%;
+
+  & img {
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
 
 .promo__date {
@@ -169,6 +177,10 @@ span.promo__date--literal {
     padding-bottom: 100px;
   }
 
+  .promo__background {
+    padding-top: 47px;
+  }
+
   .promo__content--header {
     & h2 {
       font-size: 52px;
@@ -183,7 +195,6 @@ span.promo__date--literal {
 
   .promo__content {
     min-width: 202px;
-    padding-top: 48px;
 
     & p {
       margin-top: 1px;
@@ -251,9 +262,7 @@ span.promo__date--literal {
   }
 
   .promo__content a {
-    margin-bottom: 51px;
     width: 197px;
-    margin-top: 30px;
   }
 
   .promo__img {
