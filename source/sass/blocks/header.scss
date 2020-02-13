@@ -59,14 +59,15 @@
   min-height: 400px;
   display: flex;
   justify-content: start;
+}
 
-  &--img {
-    width: 39.5%;
+.page-header__img {
+  @include mp-reset;
+  width: 39.5%;
 
-    & img {
-      display: block;
-      width: 100%;
-    }
+  & img {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -249,10 +250,10 @@
     margin-top: 20px;
     justify-content: center;
     min-height: 390px;
+  }
 
-    &--img {
-      width: 47.5%;
-    }
+  .page-header__img {
+    width: 47.5%;
   }
 
   .page-header__link-logo,
@@ -315,10 +316,10 @@
     max-width: 390px;
     min-height: 355px;
     margin: 0 auto;
+  }
 
-    &--img {
-      display: none;
-    }
+  .page-header__img {
+    display: none;
   }
 
   .page-header__link-logo,

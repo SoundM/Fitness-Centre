@@ -42,7 +42,7 @@
   background-color: #1c3374;
   display: flex;
   position: relative;
-  justify-content: flex-end;
+  justify-content: start;
   min-height: 242px;
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -210,6 +210,8 @@
 
   .reviews__item {
     min-height: 335px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .reviews__photo {
@@ -227,11 +229,14 @@
   }
 
   .reviews__content {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 
     & h3 {
-      margin-left: 55%;
+      margin-left: 56%;
+      text-align: left;
       margin-top: 48px;
       margin-bottom: 23px;
       font-size: 20px;
@@ -240,8 +245,7 @@
     }
 
     & p {
-      width: 75%;
-      margin: 0 auto;
+      width: 100%;
       text-align: center;
     }
   }
@@ -255,6 +259,7 @@
   }
 
   .reviews__control {
+    top: 50%;
     transform: translateY(-45%);
   }
 }
