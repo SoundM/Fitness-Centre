@@ -29,6 +29,45 @@ yak1.addEventListener('click', function () {
   goHref(place1);
 });
 
+// слайдер легкий карусель
+var allReviews = document.querySelector('.reviews__menu');
+allReviews.classList.remove('no-js');
+
+var slideIndex = 1;
+// var slides = document.querySelectorAll('.reviews__item');
+var slides = [].slice.call(document.querySelectorAll('.reviews__item'), 0);
+var prev = document.querySelector('.reviews__control--left');
+var next = document.querySelector('.reviews__control--right');
+
+
+showSlides(slideIndex);
+
+function showSlides(n) {
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex - 1].style.display = 'block';
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+prev.addEventListener('click', function () {
+  plusSlides(-1);
+});
+
+next.addEventListener('click', function () {
+  plusSlides(1);
+});
 
 // слайдер
 var allTrainers = document.querySelector('.trainers__menu');
@@ -39,8 +78,10 @@ var multiItemSlider = (function () {
     var mainElement = document.querySelector(selector); // основный элемент блока
     var sliderSection = document.querySelector('.trainers');
     var sliderMenu = mainElement.querySelector('.trainers__menu'); // обертка для .trainers-item
-    var sliderItems = mainElement.querySelectorAll('.trainers__item'); // элементы (.trainers-item)
-    var sliderControls = mainElement.querySelectorAll('.trainers__control'); // элементы управления
+    // var sliderItems = mainElement.querySelectorAll('.trainers__item'); // элементы (.trainers-item)
+    var sliderItems = [].slice.call(document.querySelectorAll('.trainers__item'), 0); // для IE
+    // var sliderControls = mainElement.querySelectorAll('.trainers__control'); // элементы управления
+    var sliderControls = [].slice.call(document.querySelectorAll('.trainers__control'), 0); // для IE
     var sliderControlLeft = mainElement.querySelector('.trainers__control--left'); // кнопка "LEFT"
     var sliderControlRight = mainElement.querySelector('.trainers__control--right'); // кнопка "RIGHT"
     var sectionWidth = parseFloat(getComputedStyle(sliderSection).width);
@@ -133,43 +174,3 @@ var multiItemSlider = (function () {
 }());
 
 var trainers = multiItemSlider('.trainers');
-
-// слайдер легкий карусель
-var allReviews = document.querySelector('.reviews__menu');
-allReviews.classList.remove('no-js');
-
-var slideIndex = 1;
-var slides = document.querySelectorAll('.reviews__item');
-var prev = document.querySelector('.reviews__control--left');
-var next = document.querySelector('.reviews__control--right');
-
-
-showSlides(slideIndex);
-
-function showSlides(n) {
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  slides[slideIndex - 1].style.display = 'block';
-}
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-prev.addEventListener('click', function () {
-  plusSlides(-1);
-});
-
-next.addEventListener('click', function () {
-  plusSlides(1);
-});
-
