@@ -484,11 +484,15 @@
     <div class="contact__form">
       <h2>БЕСПЛАТНОЕ занятие</h2>
       <div class="contact__form-wrapper">
-        <form class="contact__form-wrapper" id="form">
-          <label class="visually-hidden" for="name">email</label>
-          <input required="" type="text" name="name" id="name" placeholder="Имя">
-          <label class="visually-hidden" for="tel">Телефон</label>
-          <input required="" type="number" id="tel" placeholder="Телефон">
+        <form class="contact__form-wrapper" id="form" action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" placeholder="" required="">
+          </div>
+          <div>
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX" required="">
+          </div>
           <button type="submit">Отправить</button>
         </form>
       </div>

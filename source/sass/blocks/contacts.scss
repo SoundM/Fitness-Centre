@@ -32,15 +32,52 @@
 
     color: $font-white;
   }
+}
 
-  & input {
+.contact__form-wrapper {
+  @include mp-reset;
+  width: 60.5%;
+  margin-left: 15%;
+
+  & form {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  & div {
+    @include mp-reset;
     width: 46.8%;
-    height: 27px;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid #74819c;
+  }
+
+  & label {
+    @include text;
+    margin-right: 10px;
     font-family: $font-family-Roboto-Condensed;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: $font-white;
+    background-color: transparent;
+  }
+
+  & input {
+    @include text;
+    margin-right: 10px;
+    font-family: $font-family-Roboto-Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
     display: flex;
     align-items: center;
     color: $font-white;
@@ -48,11 +85,14 @@
 
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #74819c;
 
     &:hover {
       opacity: 0.7;
       cursor: pointer;
+
+      &::placeholder {
+        color: $font-white;
+      }
     }
 
     &:focus {
@@ -66,15 +106,16 @@
     }
 
     &::placeholder {
+      @include text;
       font-family: $font-family-Roboto-Condensed;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
-      line-height: 16px;
+      line-height: 14px;
       display: flex;
       align-items: center;
 
-      color: $font-white;
+      color: transparent;
     }
   }
 
@@ -113,20 +154,6 @@
       opacity: 0.4;
       cursor: pointer;
     }
-  }
-}
-
-.contact__form-wrapper {
-  @include mp-reset;
-  width: 60.5%;
-  margin-left: 15%;
-
-  & form {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 
@@ -239,10 +266,10 @@
   .contact__form-wrapper {
     margin-left: 17.4%;
     width: 61.5%;
-  }
 
-  .contact__form input {
-    width: 43.8%;
+    & div {
+      width: 43.8%;
+    }
   }
 
   .contact__address {
@@ -303,10 +330,6 @@
       line-height: 32px;
     }
 
-    & input {
-      width: 100%;
-      margin-bottom: 30px;
-    }
 
     & button {
       margin-top: 10px;
@@ -316,6 +339,11 @@
   .contact__form-wrapper {
     margin-left: 4.2%;
     width: 91.5%;
+
+    & div {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   .contact__address {
