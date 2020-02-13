@@ -20,7 +20,7 @@
   }
 }
 
-.season-tickets__for-a-period-of {
+.season-tickets__for-a-period-of-menu {
   @include list-reset;
   margin-top: 35px;
   width: 29%;
@@ -28,32 +28,32 @@
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   display: flex;
   justify-content: space-between;
-
-  & a {
-    @include a;
-    font-family: $font-family-Roboto-Condensed;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 150%;
-
-    display: flex;
-    align-items: center;
-
-    color: rgba(16, 38, 84, 0.5);
-
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
 }
 
-.season-tickets__for-a-period-of a:focus,
-.season-tickets__for-a-period-of a:active {
+.season-tickets__for-a-period-of-link {
+  @include a;
+  font-family: $font-family-Roboto-Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(16, 38, 84, 0.5);
+}
+
+
+.season-tickets__for-a-period-of-link--active {
   width: 100%;
   position: relative;
   color: $font-black;
+  opacity: 1;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &::after {
     content: "";
@@ -238,7 +238,7 @@ span.season-tickets__price {
     }
   }
 
-  .season-tickets__for-a-period-of {
+  .season-tickets__for-a-period-of-menu {
     width: 49%;
     margin-top: 30px;
 
@@ -248,7 +248,7 @@ span.season-tickets__price {
     }
   }
 
-  .season-tickets__for-a-period-of a.active::after {
+  .season-tickets__for-a-period-of-item a.active::after {
     height: 2px;
     bottom: -14px;
   }
@@ -278,14 +278,14 @@ span.season-tickets__price {
     }
   }
 
-  .season-tickets__for-a-period-of {
+  .season-tickets__for-a-period-of-menu {
     width: 100%;
     margin-top: 22px;
+  }
 
-    & a {
-      font-size: 16px;
-      line-height: 150%;
-    }
+  .season-tickets__for-a-period-of-item a {
+    font-size: 16px;
+    line-height: 150%;
   }
 
   .season-tickets__menu {

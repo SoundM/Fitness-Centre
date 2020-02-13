@@ -69,6 +69,28 @@ next.addEventListener('click', function () {
   plusSlides(1);
 });
 
+// кнопки абонементов
+var activeButton = 0;
+var seasonTicketsButtons = [].slice.call(document.querySelectorAll('.season-tickets__for-a-period-of-link'), 0);
+var wrapperTicketsButtons = document.querySelector('.season-tickets__for-a-period-of-menu');
+
+showButton(activeButton);
+
+function showButton(n) {
+  for (var i = 0; i < seasonTicketsButtons.length; i++) {
+    seasonTicketsButtons[i].classList.remove('season-tickets__for-a-period-of-link--active');
+  }
+  seasonTicketsButtons[n].classList.add('season-tickets__for-a-period-of-link--active');
+}
+
+wrapperTicketsButtons.addEventListener('click', function (event) {
+  for (var j = 0; j < seasonTicketsButtons.length + 1; j++) {
+    if (event.target.classList.contains('season-tickets__for-a-period-of-link') && event.target === seasonTicketsButtons[j]) {
+      showButton(j);
+    }
+  }
+});
+
 // слайдер
 var allTrainers = document.querySelector('.trainers__menu');
 allTrainers.classList.remove('no-js');
