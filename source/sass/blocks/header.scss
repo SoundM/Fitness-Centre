@@ -1,12 +1,12 @@
 .page-header {
   @include mp-reset;
-  margin-right: 7.5%;
-  margin-left: 7.5%;
   padding-top: 30px;
   padding-bottom: 52px;
 }
 
 .page-header__nav {
+  margin-right: 7.5%;
+  margin-left: 7.5%;
   display: flex;
   justify-content: space-between;
 }
@@ -55,12 +55,13 @@
 
 .page-header__wrapper-content {
   @include mp-reset;
+  margin-right: 7.5%;
   min-height: 400px;
   display: flex;
   justify-content: start;
 
   &--img {
-    width: 43%;
+    width: 39.5%;
 
     & img {
       display: block;
@@ -74,7 +75,7 @@
   margin-top: 303px;
   margin-bottom: 42px;
   margin-right: 5.3%;
-  width: 34.3%;
+  width: 39.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -119,7 +120,7 @@
     @include list-reset;
     display: flex;
     flex-direction: column;
-    margin-right: 67%;
+    padding-right: 264px;
 
     & li {
       text-align: right;
@@ -238,7 +239,13 @@
     padding-bottom: 80px;
   }
 
+  .page-header__nav {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .page-header__wrapper-content {
+    margin-right: 0;
     margin-top: 20px;
     justify-content: center;
     min-height: 390px;
@@ -282,6 +289,7 @@
 
     & ul {
       margin-right: 65%;
+      padding: 0;
     }
 
     & .page-header__content--link {
