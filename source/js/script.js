@@ -196,3 +196,90 @@ var multiItemSlider = (function () {
 }());
 
 var trainers = multiItemSlider('.trainers');
+
+// маска для формы
+window.addEventListener('DOMContentLoaded', function () {
+  var keyCode;
+
+  function mask(event) {
+    // eslint-disable-next-line no-unused-expressions
+    event.keyCode && (keyCode = event.keyCode);
+    // eslint-disable-next-line no-invalid-this
+    var pos = this.selectionStart;
+    if (pos < 3) {
+      event.preventDefault();
+    }
+
+    var matrix = '+7(___) ___ ____';
+    var i = 0;
+    var def = matrix.replace(/\D/g, '');
+    // eslint-disable-next-line no-invalid-this
+    var val = this.value.replace(/\D/g, '');
+    var newValue = matrix.replace(/[_\d]/g, function (a) {
+      return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+    });
+    i = newValue.indexOf('_');
+    if (i !== -1) {
+      // eslint-disable-next-line no-unused-expressions
+      i < 4 && (i = 3);
+      newValue = newValue.slice(0, i);
+    }
+    // eslint-disable-next-line no-invalid-this
+    var reg = matrix.substr(0, this.value.length).replace(/_+/g, function (a) {
+      return '\\d{0,' + a.length + '}';
+    }).replace(/[+()]/g, '\\$&');
+    reg = new RegExp('^' + reg + '$');
+    // eslint-disable-next-line no-invalid-this
+    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+      // eslint-disable-next-line no-invalid-this
+      this.value = newValue;
+    }
+
+    // eslint-disable-next-line no-invalid-this
+    if (event.type === 'blur' && this.value.length < 5) {
+      // eslint-disable-next-line no-invalid-this
+      this.value = '';
+    }
+  }
+
+  var input = document.querySelector('#tel');
+  var inputPhone = document.querySelector('#modal-tel');
+
+  input.addEventListener('input', mask, false);
+  input.addEventListener('focus', mask, false);
+  input.addEventListener('blur', mask, false);
+  input.addEventListener('keydown', mask, false);
+
+  inputPhone.addEventListener('input', mask, false);
+  inputPhone.addEventListener('focus', mask, false);
+  inputPhone.addEventListener('blur', mask, false);
+  inputPhone.addEventListener('keydown', mask, false);
+});
+
+
+// localStorage для модального окна
+
+var form = document.querySelector('.modal form');
+
+if (window.localStorage) {
+  var elements = form.querySelectorAll('[name]');
+  var elLength = elements.length;
+  var i;
+
+  for (i = 0; i < elLength; i++) {
+    (function (element) {
+      var name = element.getAttribute('name');
+
+      element.value = localStorage.getItem(name) || '';
+
+      element.onkeyup = function () {
+        var value = element.value;
+        if (!value) {
+          value = '';
+        }
+
+        localStorage.setItem(name, value);
+      };
+    })(elements[i]);
+  }
+}
