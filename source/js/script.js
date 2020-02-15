@@ -1,18 +1,4 @@
 'use strict';
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
-//
-// pageHeader.classList.remove('page-header--nojs');
-//
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
 
 // Якорь
 var yak1 = document.querySelector('a[href="#yak1"]');
@@ -243,23 +229,17 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   var input = document.querySelector('#tel');
-  var inputPhone = document.querySelector('#modal-tel');
 
   input.addEventListener('input', mask, false);
   input.addEventListener('focus', mask, false);
   input.addEventListener('blur', mask, false);
   input.addEventListener('keydown', mask, false);
-
-  inputPhone.addEventListener('input', mask, false);
-  inputPhone.addEventListener('focus', mask, false);
-  inputPhone.addEventListener('blur', mask, false);
-  inputPhone.addEventListener('keydown', mask, false);
 });
 
 
 // localStorage для модального окна
 
-var form = document.querySelector('.modal form');
+var form = document.querySelector('form');
 
 if (window.localStorage) {
   var elements = form.querySelectorAll('[name]');
