@@ -1,90 +1,90 @@
-.wrapper-header {
-  @include mp-reset;
-  min-height: 590px; //658
-  background-color: #b80027;
-  background-image: url("../img/desktop@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
+//.wrapper-header {
+//  @include mp-reset;
+//  min-height: 590px; //658
+//  background-color: #b80027;
+//  background-image: url("../img/desktop@1x.jpg");
+//  background-repeat: no-repeat, no-repeat;
+//  background-position: 50% 0;
+//  background-size: cover;
+//
+//  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//    background-image: url("../img/desktop@2x.jpg");
+//  }
+//}
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/desktop@2x.jpg");
-  }
-}
+//@media (max-width: $tablet-width) {
+//  .wrapper-header {
+//    min-height: 554px;
+//    background-image: url("../img/tablet@1x.jpg");
+//    background-repeat: no-repeat;
+//    background-position: 50% 0;
+//    background-size: cover;
+//
+//    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//      background-image: url("../img/tablet@2x.jpg");
+//    }
+//  }
+//}
 
-@media (max-width: $tablet-width) {
-  .wrapper-header {
-    min-height: 554px;
-    background-image: url("../img/tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+//@media (max-width: $mobile-width) {
+//  .wrapper-header {
+//    min-height: 491px;
+//    background-image: url("../img/header-mobile@1x.jpg");
+//    background-repeat: no-repeat;
+//    background-position: 50% 0;
+//    background-size: cover;
+//
+//    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//      background-image: url("../img/header-mobile@2x.jpg");
+//    }
+//  }
+//}
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/tablet@2x.jpg");
-    }
-  }
-}
+//.wrapper-season-tickets {
+//  @include mp-reset;
+//  min-height: 851px;
+//  background-color: $bg-grey;
+//  position: relative;
+//
+//  &::after {
+//    content: "";
+//    position: absolute;
+//    width: 287px;
+//    height: 494px;
+//    right: 0;
+//    bottom: -150px;
+//    background-image: url("../img/pancakes-desktop@1x.png");
+//    background-repeat: no-repeat, no-repeat;
+//    background-size: 287px 494px;
+//    z-index: 0;
+//
+//    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//      background-image: url("../img/pancakes-desktop@2x.png");
+//    }
+//  }
+//}
 
-@media (max-width: $mobile-width) {
-  .wrapper-header {
-    min-height: 491px;
-    background-image: url("../img/header-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/header-mobile@2x.jpg");
-    }
-  }
-}
-
-.wrapper-season-tickets {
-  @include mp-reset;
-  min-height: 851px;
-  background-color: $bg-grey;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 287px;
-    height: 494px;
-    right: 0;
-    bottom: -150px;
-    background-image: url("../img/pancakes-desktop@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: 287px 494px;
-    z-index: 0;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/pancakes-desktop@2x.png");
-    }
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .wrapper-season-tickets {
-    min-height: 1779px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 347px;
-      height: 444px;
-      right: 0;
-      bottom: -125px;
-      background-image: url("../img/pancakes-tablet@1x.png");
-      background-repeat: no-repeat, no-repeat;
-      background-size: 347px 444px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/pancakes-tablet@2x.png");
-      }
-    }
-  }
-}
+//@media (max-width: $tablet-width) {
+//  .wrapper-season-tickets {
+//    min-height: 1779px;
+//
+//    &::after {
+//      content: "";
+//      position: absolute;
+//      width: 347px;
+//      height: 444px;
+//      right: 0;
+//      bottom: -125px;
+//      background-image: url("../img/pancakes-tablet@1x.png");
+//      background-repeat: no-repeat, no-repeat;
+//      background-size: 347px 444px;
+//
+//      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//        background-image: url("../img/pancakes-tablet@2x.png");
+//      }
+//    }
+//  }
+//}
 
 @media (max-width: $mobile-width) {
   .wrapper-season-tickets {
