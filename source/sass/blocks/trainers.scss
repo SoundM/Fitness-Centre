@@ -5,7 +5,7 @@
   background-color: $bg-white;
 }
 
-.trainers-wrapper {
+.trainers__wrapper {
   @include mp-reset;
   margin-right: 7.6%;
   margin-left: 7.6%;
@@ -136,11 +136,11 @@ ul.trainers__menu.no-js ~ a {
   display: none;
 }
 
-div.trainers__item--content {
+div.trainers__item-content {
   display: none;
 }
 
-li.trainers__item:hover div.trainers__item--content {
+li.trainers__item:hover div.trainers__item-content {
   @include mp-reset;
   width: 100%;
   min-height: 258px;
@@ -214,7 +214,7 @@ li.trainers__item:hover div.trainers__item--content {
     min-height: 476px;
   }
 
-  .trainers-wrapper {
+  .trainers__wrapper {
     margin-right: 13.1%;
     margin-left: 13.1%;
     display: flex;
@@ -264,7 +264,7 @@ li.trainers__item:hover div.trainers__item--content {
     min-height: 418px;
   }
 
-  .trainers-wrapper {
+  .trainers__wrapper {
     margin-right: 15.1%;
     margin-left: 15.1%;
 
